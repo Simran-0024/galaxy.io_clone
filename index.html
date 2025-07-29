@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="media.css">
+
+
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="images/galaxy.webp" alt="Galaxy.ai Logo" style="height: 40px;">
+      </a>
+
+      <!-- Toggle area -->
+      <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="modal" data-bs-target="#mobileNavModal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end d-none d-md-flex ">
+        <ul class="navbar-nav mb-2 mb-lg-0 align-items-center gap-3">
+          <li class="nav-item d-flex align-items-center">
+            <i class="fa-solid fa-circle" style="font-size: 8px; color:#3ec342"></i>
+            <a class="nav-link ps-1" href="#">Tools</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Affiliate 💸</a></li>
+          <li class="nav-item"><button class="btn btn-light me-2" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Sign In</button></li>
+          <li class="nav-item"><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#getfree">Get Started
+              for Free</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Offcanvas for Small Screens -->
+  <!--  toggle button action form -->
+  <div class="modal fade" id="mobileNavModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-md-down">
+      <div class="modal-content">
+
+        <!--Heading -->
+        <div class="modal-header border-bottom">
+          <img src="images/galaxy.webp" alt="Galaxy.ai Logo" style="height: 30px;">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!---- Body -->
+        <div class="modal-body">
+          <form class="p-4">
+            <a href="#" class="d-block mb-3 fw-medium text-dark text-decoration-none" style="font-size: 16px;">Tools</a>
+            <a href="#" class="d-block mb-4 fw-medium text-dark text-decoration-none" style="font-size: 16px;">Affiliate
+              💸</a>
+
+            <!-- Buttons-->
+            <button type="button" class="btn w-100 mb-3 "
+              style="background-color: #f7f8f9; color: #1f2937; font-weight: 500; border-radius: 10px; font-size: 16px;"
+              data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
+              Sign in
+            </button>
+
+            <button type="button" class="btn w-100"
+              style="background-color: black; color: white; font-weight: 500; border-radius: 10px; font-size: 16px;"
+              data-bs-toggle="modal" data-bs-target="#getfree" data-bs-dismiss="modal">
+              Get started for free
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--sign in button action form -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/login" method="POST"
+            style="max-width: 400px; margin: auto; text-align: center; font-family: sans-serif;">
+
+
+            <div class="d-flex justify-content-center" style="margin-bottom:  20px;">
+              <img src="images/logo-signin.avif" alt="Galaxy.ai Logo" style="width: 50px; height: 50px;">
+            </div>
+
+            <h2 style="font-weight: 600; font-size: 20px;">Sign in to Galaxy.ai</h2>
+            <p style="color: #6b7280; font-size: 14px;">Welcome back! Please sign in to continue</p>
+
+
+            <div class="d-flex gap-2 mt-4">
+              <button type="button" class="d-flex align-items-center justify-content-center py-2"
+                style="flex: 1;border: 1px solid #e3dfdf; border-radius: 10px; background: white; ">
+                <img class="img-fluid" src="images/apple.svg" alt="Apple"
+                  style="width: 16px; height:16px; vertical-align: middle; margin-right: 6px;"> <span
+                  style="font-size: 14px; font-weight: 500; color: #333;">
+                  Apple
+                </span>
+              </button>
+              <button type="button" class="d-flex align-items-center justify-content-center"
+                style="flex: 1;border: 1px solid #e3dfdf; border-radius: 10px; background: white; ">
+                <img src="images/google.png" alt="Google"
+                  style="width: 16px; height:16px; vertical-align: middle; margin-right: 6px;"> <span
+                  style="font-size: 14px; font-weight: 500; color: #333;">
+                  Google
+                </span>
+              </button>
+            </div>
+
+
+            <div style="display: flex; align-items: center; margin: 20px 0;">
+              <hr style="flex: 1; border: none; border-top: 1px solid #ccc;">
+              <span style="margin: 0 10px; color: #999;">or</span>
+              <hr style="flex: 1; border: none; border-top: 1px solid #ccc;">
+            </div>
+
+            <!-- Email area -->
+            <div style="text-align: left;">
+              <label for="email" style="font-weight: 500; font-size: 14px;">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email address"
+                style="width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #e3dfdf; border-radius: 10px; font-size: 14px;">
+            </div>
+
+            <!-- Continue area -->
+            <button type="submit"
+              style="margin-top: 20px; width: 100%; padding: 12px; background-color: #1f2937; color: white; border: none; border-radius: 10px; font-weight: 500; font-size: 14px;">
+              Continue →
+            </button>
+
+            <!-- Footer aere -->
+            <p style="margin-top: 20px; font-size: 13px; color: #6b7280;">
+              Don't have an account? <a class="text-decoration-none" href="/signup"
+                style="color: black; font-weight: 500;">Sign up</a>
+            </p>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--get free button action form -->
+  <div class="modal fade " id="getfree" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/login" method="POST"
+            style="max-width: 400px; margin: auto; text-align: center; font-family: sans-serif;">
+
+
+            <div class="d-flex justify-content-center" style="margin-bottom:  20px;">
+              <img src="images/logo-signin.avif" alt="Galaxy.ai Logo" style="width: 50px; height: 50px;">
+            </div>
+
+            <!-- Title -->
+            <h2 style="font-weight: 600; font-size: 20px;">Sign in to Galaxy.ai</h2>
+            <p style="color: #6b7280; font-size: 14px;">Welcome back! Please sign in to continue</p>
+
+            <!-- Social Buttons -->
+            <div class="d-flex gap-2 mt-4">
+              <button type="button" class="d-flex align-items-center justify-content-center py-2"
+                style="flex: 1;border: 1px solid #e3dfdf; border-radius: 10px; background: white; ">
+                <img class="img-fluid" src="images/apple.svg" alt="Apple"
+                  style="width: 16px; height:16px; vertical-align: middle; margin-right: 6px;"> <span
+                  style="font-size: 14px; font-weight: 500; color: #333;">
+                  Apple
+                </span>
+              </button>
+              <button type="button" class="d-flex align-items-center justify-content-center"
+                style="flex: 1;border: 1px solid #e3dfdf; border-radius: 10px; background: white; ">
+                <img src="images/google.png" alt="Google"
+                  style="width: 16px; height:16px; vertical-align: middle; margin-right: 6px;"> <span
+                  style="font-size: 14px; font-weight: 500; color: #333;">
+                  Google
+                </span>
+              </button>
+            </div>
+
+
+            <div style="display: flex; align-items: center; margin: 20px 0;">
+              <hr style="flex: 1; border: none; border-top: 1px solid #ccc;">
+              <span style="margin: 0 10px; color: #999;">or</span>
+              <hr style="flex: 1; border: none; border-top: 1px solid #ccc;">
+            </div>
+
+            <!-- Name area -->
+            <div style="display: flex; gap: 10px;">
+              <div style="flex: 1; text-align: left;">
+                <label for="firstName" style="font-weight: 500; font-size: 14px;">First name <span
+                    style="color:#999">(Optional)</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name"
+                  style="width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #e3dfdf; border-radius: 10px; font-size: 14px;">
+              </div>
+              <div style="flex: 1; text-align: left;">
+                <label for="lastName" style="font-weight: 500; font-size: 14px;">Last name <span
+                    style="color:#999">(Optional)</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last name"
+                  style="width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #e3dfdf; border-radius: 10px; font-size: 14px;">
+              </div>
+            </div>
+
+            <!--Email area-->
+            <div style="text-align: left; margin-top: 15px;">
+              <label for="email" style="font-weight: 500; font-size: 14px;">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email address"
+                style="width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #e3dfdf; border-radius: 10px; font-size: 14px;">
+            </div>
+
+            <!-- Password raea-->
+            <div style="text-align: left; margin-top: 15px;">
+              <label for="password" style="font-weight: 500; font-size: 14px;">Password</label>
+              <input type="password" id="password" name="password" required placeholder="Enter your password"
+                style="width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #e3dfdf; border-radius: 10px; font-size: 14px;">
+            </div>
+
+            <!-- Submit-->
+            <button type="submit"
+              style="margin-top: 20px; width: 100%; padding: 12px; background-color: #1f2937; color: white; border: none; border-radius: 10px; font-weight: 500; font-size: 14px;">
+              Continue →
+            </button>
+
+            <!-- Footer area-->
+            <p style="margin-top: 20px; font-size: 13px; color: #6b7280;">
+              Already have an account? <a href="/login"
+                style="color: black;text-decoration:none; font-weight: 500;">Sign in</a>
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </ul>
+  </div>
+
+  </div>
+  </div>
+  <!--main-body -->
+
+  <div
+    class=" full-body container-fluid px-3 my-5 mx-auto text-center d-flex flex-column align-items-center justify-content-center">
+
+    <div class="container-fluid my-5 p-0 text-center">
+      <div class="text-center d-flex justify-content-center mb-4">
+        <img class="All-in-logo" src="images/v1.webp">
+      </div>
+      <div class="ms-5 me-5 mb-4 px-3">
+        <h1 class="text-center ">
+          <div class=" headi fw-bold">Every AI Tool You Need</div>
+          <div class=" headi display-2 mt-3 fw-bold">Just $15/month</div>
+          <div class="d-flex justify-content-center mt-4" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-dark rounded-pill btn-lg ">Get started for free</button>
+          </div>
+        </h1>
+      </div>
+      <div class="row justify-content-center align-items-center mb-5">
+        <div class="col-12 col-md-auto d-flex justify-content-center mb-3 mb-md-0 px-2"><a href="#"><img id="app-store"
+              src="images/en-us.svg"></a></div>
+        <div class="col-12 col-md-auto d-flex justify-content-center px-2"><a href="#"><img id="play-store"
+              src="images/GetItOnGooglePlay.webp"></a></div>
+      </div>
+
+      <div class="mb-4">
+        <p class="mb-3 ">Join <span class="fw-bold"> 12,68,769 </span>happy users and counting ❤️</p>
+
+      </div>
+      <div class="container-fluid d-flex justify-content-center">
+        <div class="profile-stack">
+          <img src="images/img1.webp" alt="Profile 1">
+          <img src="images/img2.webp" alt="Profile 2">
+          <img src="images/img3.webp" alt="Profile 3">
+          <img src="images/img4.webp" alt="Profile 4">
+          <img src="images/img5.webp" alt="Profile 5">
+          <img src="images/img6.webp" alt="Profile 6">
+          <img src="images/img7.webp" alt="Profile 7">
+          <img src="images/img8.webp" alt="Profile 8">
+          <img src="images/img9.webp" alt="Profile 9">
+        </div>
+      </div>
+
+    </div>
+    <div class="logo-slider mt-5">
+      <div class="logo-track">
+
+        <img src="images/forbes.jpg" alt="Logo ">
+        <img src="images/patriot.png" alt="Logo ">
+        <img src="images/business.png" alt="Logo ">
+        <img src="images/meta.png" alt="Logo ">
+        <img src="images/logitech.png" alt="Logo ">
+        <img src="images/techcrunch.png" alt="Logo ">
+        <img src="images/tiktok.png" alt="Logo ">
+
+        <img src="images/forbes.jpg" alt="Logo ">
+        <img src="images/patriot.png" alt="Logo ">
+        <img src="images/business.png" alt="Logo ">
+        <img src="images/meta.png" alt="Logo ">
+        <img src="images/logitech.png" alt="Logo ">
+        <img src="images/techcrunch.png" alt="Logo ">
+        <img src="images/tiktok.png" alt="Logo ">
+
+        <img src="images/forbes.jpg" alt="Logo ">
+        <img src="images/patriot.png" alt="Logo ">
+        <img src="images/business.png" alt="Logo ">
+        <img src="images/meta.png" alt="Logo ">
+        <img src="images/logitech.png" alt="Logo ">
+        <img src="images/techcrunch.png" alt="Logo ">
+        <img src="images/tiktok.png" alt="Logo ">
+
+        <img src="images/forbes.jpg" alt="Logo ">
+        <img src="images/patriot.png" alt="Logo ">
+        <img src="images/business.png" alt="Logo ">
+        <img src="images/meta.png" alt="Logo ">
+        <img src="images/logitech.png" alt="Logo ">
+        <img src="images/techcrunch.png" alt="Logo ">
+        <img src="images/tiktok.png" alt="Logo ">
+
+        <img src="images/forbes.jpg" alt="Logo ">
+        <img src="images/patriot.png" alt="Logo ">
+        <img src="images/business.png" alt="Logo ">
+        <img src="images/meta.png" alt="Logo ">
+        <img src="images/logitech.png" alt="Logo ">
+        <img src="images/techcrunch.png" alt="Logo ">
+        <img src="images/tiktok.png" alt="Logo ">
+
+        <img src="images/forbes.jpg" alt="Logo ">
+        <img src="images/patriot.png" alt="Logo ">
+        <img src="images/business.png" alt="Logo ">
+        <img src="images/meta.png" alt="Logo ">
+        <img src="images/logitech.png" alt="Logo ">
+        <img src="images/techcrunch.png" alt="Logo ">
+        <img src="images/tiktok.png" alt="Logo ">
+      </div>
+    </div>
+    <div class="container-fluid px-3 mt-5">
+      <h2 class="text-center mb-5">
+        <div class="fw-bold fs-1">Save Big with Galaxy.ai</div>
+        <div class="fs-4 mt-3">Why pay for multiple subscriptions when you can get everything for $15/mo?</div>
+      </h2>
+
+      <div class=" px-3">
+        <div class="px-md-1">
+          <div class="d-flex justify-content-center">
+
+            <div class="d-flex flex-column align-items-center gap-5 justify-content-center">
+
+              <div class=" comparison-container  ">
+                <div class="row">
+
+                  <!-- Left card(red)-->
+
+
+                  <div class="col-12 col-md-6 mb-4  ">
+                    <div class="card-box left-card h-100 text-center">
+                      <div class="tag left">THE OLD WAY</div>
+                      <div class="section-title title">❌ Without Galaxy.ai: Paying Separately</div>
+                      <p class="subtext">If you subscribe to each service individually, you'd pay at least:</p>
+                      <!--inner cards-->
+                      <div class="service-row left"><span>ChatGPT</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Gemini</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Claude</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Perplexity</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Veo 3</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Grok</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Flux</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Stable Diffusion</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Midjourney</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Ideogram</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Luma</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Hailuo</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Kling</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>ElevenLabs</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>HeyGen</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Pika</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Runway</span><span>$20/mo</span></div>
+                      <div class="service-row left"><span>Leonardo</span><span>$20/mo</span></div>
+
+                      <hr>
+                      <div class="service-row m-0">
+                        <span class="fs-5">Total Cost</span>
+                        <span class="fw-bold fs-4" style="color: #d74338;">$360/mo</span>
+                      </div>
+                      <div class="m-0">
+                        <span class="fw-bold" style="color: #f44336; font-size:14px">
+                          This is what you'd pay if you didn't use Galaxy.ai
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right card(green)-->
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card-box right-card h-100">
+                      <div class="tag left">OUR SOLUTION</div>
+                      <div class="tag right">RECOMMENDED</div>
+
+                      <div class="section-title title">✅ With Galaxy.ai: Everything Included</div>
+                      <p class="subtext">Galaxy.ai gives you access to all these services for one low price:</p>
+
+                      <!--inner cards-->
+                      <div class="service-row right"><span>ChatGPT</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Gemini</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Claude</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Perplexity</span><i class="fa-solid fa-check check"></i>
+                      </div>
+                      <div class="service-row right"><span>Veo 3</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Grok</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Flux</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Stable Diffusion</span><i
+                          class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Midjourney</span><i class="fa-solid fa-check check"></i>
+                      </div>
+                      <div class="service-row right"><span>Ideogram</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Luma</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Hailuo</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Kling</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>ElevenLabs</span><i class="fa-solid fa-check check"></i>
+                      </div>
+                      <div class="service-row right"><span>HeyGen</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Pika</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Runway</span><i class="fa-solid fa-check check"></i></div>
+                      <div class="service-row right"><span>Leonardo</span><i class="fa-solid fa-check check"></i></div>
+
+                      <hr>
+                      <div class="service-row m-0">
+                        <span class="fs-5">Total Cost</span>
+                        <span class="fw-bold fs-4" style="color: #409943;">$15/mo</span>
+                      </div>
+                      <div class="m-0">
+                        <span class="fw-bold" style="color: #409943; font-size:14px">
+                          + 2000 AI tools included (new tools added every week)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!--question block area-->
+              <div class=" container card-box-ques p-6 py-6 px-6 ">
+                <div class="mx-6">
+                  <h3>
+                    <span class="fs-5 fw-bold" style="color: #1e3a8a;">🤔 Wait, how is $15/mo even possible?</span>
+                  </h3>
+                  <p><span style="color: #1e40af;">
+
+                      <span class="fw-bold">Simple:</span>
+                      We're like Costco for AI tools. By bringing together 1M+ users, we negotiate directly with AI
+                      providers for bulk deals — then pass the savings to you. You get the SAME premium models that cost
+                      $20/month elsewhere (not the free or limited versions), just at wholesale prices instead of
+                      retail.</span>
+                  </p>
+                </div>
+
+              </div>
+              <div class="card rounded-4" style=" border-color: transparent; ">
+                <div class="card-body fs-5 " style="background-color: #f3f4f6; ">
+                  <span>Stop overpaying for AI tools. Join 1M+ users saving $345/mo with Galaxy.ai</span>
+                </div>
+              </div>
+              <div class="row card-box-info p-4 justify-content-center">
+
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center gap-2 mb-3 mb-md-0">
+                  <span class="fw-bold fs-4 text-decoration-line-through text-muted">$360/mo elsewhere</span>
+                  <i class="fa-solid fa-arrow-down fs-5 text-white"></i>
+                  <span class="fw-bold fs-4" style="color: #4ade80;">$15/mo with Galaxy.ai</span>
+                </div>
+
+                <div
+                  class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start align-items-center gap-2 text-center text-md-start">
+                  <span class="fs-5 text-white">
+                    Save <span style="color: #4ade80;">$345/mo</span> & get 2000+ AI tools
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--tool cards heading-->
+
+    <section class="container-fluid px-3 mt-5 ">
+      <h2 class="text-center mb-5">
+        <div class="fw-bold cards-head">
+          Every AI Tool You'll Ever Need
+        </div>
+        <div class="cards-inner-headi mt-3" style="color: #4b5563;">
+          One platform for all your AI needs - text, image, audio, video, and more
+        </div>
+
+      </h2>
+
+      <div class="d-flex justify-content-center flex-wrap gap-4">
+        <div class="card-box-powertools mb-5">
+          <img style="height: 30px; width:30px" src="images/sparkles.png">
+          <span>Powerful AI Tools Suite</span>
+        </div>
+      </div>
+
+      <!--cards-->
+      <div class="container px-xxl-5 mx-xxl-2 py-5 mb-5 mx-auto ">
+
+        <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3 ">
+
+
+
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im1.png" alt="Multi-Model Icon" class="feature-icon">
+              <div class="feature-title">Multi-Model AI Arena</div>
+              <p class="feature-text">Seamlessly chat with GPT, Claude, Gemini, and other AI models all at once.</p>
+            </div>
+          </div>
+
+
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im2.png" alt="AI Agents Icon" class="feature-icon">
+              <div class="feature-title">AI Agents with Memory</div>
+              <p class="feature-text">Build customizable AI agents with long-term memory.</p>
+            </div>
+          </div>
+
+
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im3.png" alt="PDF Icon" class="feature-icon">
+              <div class="feature-title">PDF Chat & Analysis</div>
+              <p class="feature-text">Upload and chat with PDFs using advanced vector embeddings.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im4.png" alt="Search Icon" class="feature-icon">
+              <div class="feature-title">AI Search Engine</div>
+              <p class="feature-text">Intelligent search engine that understands context and delivers precise results.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im5.png" alt="Text Icon" class="feature-icon">
+              <div class="feature-title">Text Generation</div>
+              <p class="feature-text">Create diverse textual content including articles, ads, and creative writing.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im6.png" alt="SEO Icon" class="feature-icon">
+              <div class="feature-title">SEO Content Generation</div>
+              <p class="feature-text">Create high-quality, SEO-optimized content at scale.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im7.png" alt="AI Text Humanizer" class="feature-icon">
+              <div class="feature-title">AI Text Humanizer</div>
+              <p class="feature-text">Transform AI-generated text into natural, human-like writing with unique style.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card  h-100">
+              <img src="images/im8.png" alt="AI Content Detector" class="feature-icon">
+              <div class="feature-title">AI Content Detector</div>
+              <p class="feature-text">Identify AI-generated content with high accuracy to ensure authenticity.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im9.png" alt="AI Image Generator" class="feature-icon">
+              <div class="feature-title">AI Image Generator</div>
+              <p class="feature-text">Generate stunning images from text descriptions.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im10.png" alt="AI Object Remover" class="feature-icon">
+              <div class="feature-title">AI Object Remover</div>
+              <p class="feature-text">Seamlessly remove unwanted objects from images with AI precision.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im11.png" alt="AI Background Changer" class="feature-icon">
+              <div class="feature-title">AI Background Changer</div>
+              <p class="feature-text">Replace or remove image backgrounds with one click using AI.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im12.png" alt="AI 3D Model Generator" class="feature-icon">
+              <div class="feature-title">AI 3D Model Generator</div>
+              <p class="feature-text">Create detailed 3D models from text descriptions or 2D images.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im13.png" alt="AI Art Generator" class="feature-icon">
+              <div class="feature-title">AI Art Generator</div>
+              <p class="feature-text">Create beautiful artwork in various artistic styles and mediums.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im14.png" alt="AI Photo Studio" class="feature-icon">
+              <div class="feature-title">AI Photo Studio</div>
+              <p class="feature-text">Train custom AI models to generate consistent, on-brand photos for any subject.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im15.png" alt="AI Photo Editor" class="feature-icon">
+              <div class="feature-title">AI Photo Editor</div>
+              <p class="feature-text">Transform and enhance photos with advanced AI editing capabilities.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im16.png" alt="AI Travel Photo Generator" class="feature-icon">
+              <div class="feature-title">AI Travel Photo Generator</div>
+              <p class="feature-text">Generate realistic travel photos from any location in your preferred style.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im17.png" alt="AI Face Swap" class="feature-icon">
+              <div class="feature-title">AI Face Swap</div>
+              <p class="feature-text">Seamlessly swap faces in images or videos while preserving natural looks.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im18.png" alt="AI Clothes Changer" class="feature-icon">
+              <div class="feature-title">AI Clothes Changer</div>
+              <p class="feature-text">Virtually try on different outfits and styles with AI.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im19.png" alt="AI Interior Design" class="feature-icon">
+              <div class="feature-title">AI Interior Design</div>
+              <p class="feature-text">Transform spaces with AI-powered interior design visualization.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im20.png" alt="AI QR Code Generator" class="feature-icon">
+              <div class="feature-title">AI QR Code Generator</div>
+              <p class="feature-text">Create beautiful, custom-designed QR codes with AI styling.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im21.png" alt="AI Headshot Generator" class="feature-icon">
+              <div class="feature-title">AI Headshot Generator</div>
+              <p class="feature-text">Create professional headshots and portraits using AI imaging technology.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im22.png" alt="AI Logo Generator" class="feature-icon">
+              <div class="feature-title">AI Logo Generator</div>
+              <p class="feature-text">Design unique and customizable logos for businesses and brands.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im23.png" alt="AI Icon Generator" class="feature-icon">
+              <div class="feature-title">AI Icon Generator</div>
+              <p class="feature-text">Create beautiful, customizable icons for apps and interfaces.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im24.png" alt="AI Illustration Generator" class="feature-icon">
+              <div class="feature-title">AI Illustration Generator</div>
+              <p class="feature-text">Create custom illustrations and artwork in various artistic styles.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im25.png" alt="Speech-to-Text Transcription" class="feature-icon">
+              <div class="feature-title">Speech-to-Text Transcription</div>
+              <p class="feature-text">Transcribe audio to text using Whisper, with summarization.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im26.png" alt="Text-to-Speech Synthesis" class="feature-icon">
+              <div class="feature-title">Text-to-Speech Synthesis</div>
+              <p class="feature-text">Convert text to lifelike speech in 26+ languages and 1000+ voices.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im27.png" alt="AI Voice Cloner" class="feature-icon">
+              <div class="feature-title">AI Voice Cloner</div>
+              <p class="feature-text">Clone any voice with just a few seconds of audio sample.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im28.png" alt="AI Music Generator" class="feature-icon">
+              <div class="feature-title">AI Music Generator</div>
+              <p class="feature-text">Create original music and soundtracks using AI composition.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im29.png" alt="AI Video Generator" class="feature-icon">
+              <div class="feature-title">AI Video Generator</div>
+              <p class="feature-text">Produce engaging video content from text prompts or scripts.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im30.png" alt="AI Video Translator" class="feature-icon">
+              <div class="feature-title">AI Video Translator</div>
+              <p class="feature-text">Translate videos into multiple languages while preserving lip sync and voice
+                style.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im31.png" alt="AI Talking Photo Generator" class="feature-icon">
+              <div class="feature-title">AI Talking Photo Generator</div>
+              <p class="feature-text">Bring still photos to life with realistic speech and facial animations.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im32.png" alt="AI Avatar Video Maker" class="feature-icon">
+              <div class="feature-title">AI Avatar Video Maker</div>
+              <p class="feature-text">Create customized avatar videos for presentations and content creation.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im33.png" alt="Code Generation & Explanation" class="feature-icon">
+              <div class="feature-title">Code Generation & Explanation</div>
+              <p class="feature-text">Generate, explain, and debug code across multiple languages.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im34.png" alt="AI App Builder" class="feature-icon">
+              <div class="feature-title">AI App Builder</div>
+              <p class="feature-text">Build fully functional web and mobile applications with simple text prompts.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im35.png" alt="Automated Data Analysis" class="feature-icon">
+              <div class="feature-title">Automated Data Analysis</div>
+              <p class="feature-text">Perform complex data analysis and visualization with AI assistance.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card  h-100">
+              <img src="images/im36.png" alt="AI Language Translation" class="feature-icon">
+              <div class="feature-title">AI Language Translation</div>
+              <p class="feature-text">Translate between languages with high accuracy, even for dissimilar language
+                pairs.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im37.png" alt="AI Summarization" class="feature-icon">
+              <div class="feature-title">AI Summarization</div>
+              <p class="feature-text">Summarize lengthy documents, web pages, and videos, extracting key insights.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im38.png" alt="Image Analysis" class="feature-icon">
+              <div class="feature-title">Image Analysis</div>
+              <p class="feature-text">Analyze and generate descriptions for images.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-card h-100">
+              <img src="images/im39.png" alt="Custom AI Tool" class="feature-icon">
+              <div class="feature-title">Custom AI Tool</div>
+              <p class="feature-text">Already paying for another AI tool? We'll integrate it's functionality, completely
+                free.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mt-5">
+          <button type="button" class="btn btn-dark btn-lg px-4 py-3 fs-5">Explore All Tools <i
+              class="fa-solid fa-arrow-right"></i></button>
+
+        </div>
+      </div>
+
+
+      <!--reviews-->
+      <div class="container px-3 py-5">
+        <h2 class="text-center mb-5">
+          <div class="fs-1 fw-bold">Trusted by 1M+ Professionals Worldwide</div>
+          <div class="mt-2 fs-4" style="color: #4b5563;">See why smart people are switching to Galaxy.ai</div>
+
+        </h2>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mx-auto review-part">
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body ">
+                <p class="card-text text-start " style="font-size: 14px;">I was honestly getting overwhelmed with all my
+                  AI subscriptions... ChatGPT, Midjourney,
+                  Claude-it was adding up to $150+ monthly! Found Galaxy.ai through Twitter and wow... everything I need
+                  in one place for $15/mo. The image generation is CRAZY good 🤯</p>
+                <div class="d-flex"><img src="images/test1.webp"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="ake Reynolds">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Jake Reynolds</h5><span
+                      style="font-size: 12px; color:#737373">Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body ">
+                <p class="card-text text-start " style="font-size: 14px;">ngl was skeptical at first... another AI tool?
+                  🙄 But this is different. Having everything in one place vs switching between tabs & different
+                  subscriptions is such a relief. The text-to-speech quality is insane too!</p>
+                <div class="d-flex"><img src="images/ac.png"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="Amy Chen">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Amy Chen</h5><span
+                      style="font-size: 12px; color:#737373">Podcaster</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body ">
+                <p class="card-text text-start " style="font-size: 14px;">This tool is a lifesaver for our marketing
+                  team! We were spending $200+ monthly on various AI services. Switched to Galaxy.ai last month - same
+                  quality, better integration, fraction of the cost. The AI agents feature alone is worth the
+                  subscription 🙌</p>
+                <div class="d-flex"><img src="images/th.png"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="Thomas Henderson">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Thomas Henderson</h5><span
+                      style="font-size: 12px; color:#737373">Marketing Lead</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body">
+                <p class="card-text text-start " style="font-size: 14px;">Can't believe I used to juggle 5 different AI
+                  subscriptions before this. The multi-model chat is a game changer - being able to compare GPT-4,
+                  Claude & Gemini responses side by side has improved my work output drastically. Plus the cost
+                  savings... just wow.</p>
+                <div class="d-flex"><img src="images/sarah.webp"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="Sarah Kimmel">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Sarah Kimmel</h5><span
+                      style="font-size: 12px; color:#737373">Content Strategist</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body ">
+                <p class="card-text text-start " style="font-size: 14px;">This platform is exactly what I've been
+                  looking for! Used to spend hours jumping between different AI tools. Now everything's in one place and
+                  the quality matches or beats the standalone services. The fact that it's only $15/mo feels like
+                  highway robbery 😅</p>
+                <div class="d-flex"><img src="images/dw.png"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="David Wilson">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">David Wilson</h5><span
+                      style="font-size: 12px; color:#737373">Freelancer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body ">
+                <p class="card-text text-start " style="font-size: 14px;">The interface is so intuitive compared to
+                  other AI platforms. No more copy-pasting between different tools or keeping track of multiple
+                  subscriptions. Everything just works together seamlessly. Plus new tools dropping every week? Take my
+                  money! 💸</p>
+                <div class="d-flex"><img src="images/priya.webp"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="Priya Patel">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Priya Patel</h5><span
+                      style="font-size: 12px; color:#737373">Digital Creator</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body ">
+                <p class="card-text text-start " style="font-size: 14px;">Started using Galaxy.ai for basic stuff but
+                  now I'm hooked! The AI headshots saved me hundreds on professional photos, and I use their QR code
+                  generator almost daily for my restaurant. Best $15 I spend each month tbh</p>
+                <div class="d-flex"><img src="images/ml.png"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="Michael Lawrence">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Michael Lawrence</h5><span
+                      style="font-size: 12px; color:#737373">Restaurant Owner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card " style="border-radius: 20px;">
+
+              <div class="card-body ">
+                <p class="card-text text-start " style="font-size: 14px;">Just tried the new AI video generation feature
+                  and I'm genuinely shocked at the quality. The best part is they keep adding amazing new tools every
+                  week. Cancelled all my other AI subscriptions - no regrets!</p>
+                <div class="d-flex"><img src="images/lisa.webp"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="Lisa Martinez">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Lisa Martinez</h5><span
+                      style="font-size: 12px; color:#737373">YouTuber</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="border-radius: 20px;">
+
+              <div class="card-body">
+                <p class="card-text text-start " style="font-size: 14px;">I don't usually write reviews but had to share
+                  - Galaxy.ai has literally transformed how I work. Their AI tools are consistently better than
+                  standalone services I was paying premium for. The value you get for $15 is actually insane.</p>
+                <div class="d-flex"><img src="images/kp.png"
+                    style="width: 36px;height:36px ; border-radius:50%;border:2px solid #dbd8d8" alt="Kevin Patterson">
+                  <div class="text-start mx-2">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px;">Kevin Patterson</h5><span
+                      style="font-size: 12px; color:#737373">Startup Founder</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!--simpler solution area-->
+      <div class="container ">
+
+        <div class="mt-5 py-5 mb-5 px-2 px-md-3 px-lg-5 mx-lg-5">
+          <h2 class="text-center mb-5">
+            <div class="fw-bold cards-head">A Simpler Solution</div>
+            <div class="mt-2 cards-inner-headi" style="color: #4b5563;">No more paying for 10+ different apps! Galaxy.ai
+              brings it
+              all home.</div>
+          </h2>
+          <div class="d-flex justify-content-center flex-wrap gap-3 " style="font-size: small;">
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/gpt.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>ChatGPT</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/gemini.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Gemini</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/claude.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Claude</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/perplexity.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Perplexity</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/veo.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Veo 3</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/grok.png" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Grok</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/flux.png" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Flux</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/stable-diffusion.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Stable Diffusion</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/midjourney.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Midjourney</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/ideogram.png" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Ideogram</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/Luma-AI.png.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Luma</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/deepseek-color.png" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>DeepSeek</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/kling-color.png" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Kling</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/hailuo.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Hailuo</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/runway.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>Runway</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/heygen.webp" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>HeyGen</span>
+
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center gap-1 d-inline">
+              <img src="images/elevenlabs.png" style="width:64px;height:64px" alt="ChatGPT Logo">
+              <span>ElevenLabs</span>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="mt-5">
+          <button type="button" class="btn btn-dark btn-lg px-4 py-3 fs-5">Get started for free</button>
+
+        </div>
+
+
+      </div>
+      <hr>
+
+      <!--footer -->
+      <div class="container py-5  px-2 text-start mx-0 flex-column ">
+        <div class=" row  d-flex flex-row justify-content-between align-items-start mb-5 gap-4 mx-lg-5 mx-auto">
+          <div class=" col-12 col-md-4 mb-5 d-flex flex-column ">
+
+            <div class="mainlogo mb-0 ">
+              <img src="images/galaxy.webp">
+              <p class="mt-1 text-start">Your Gateway to the AI Universe</p>
+              <div class="d-flex flex-row align-items-center gap-3 mt-2 mb-2">
+                <img style="height:45px ;width:135px;" src="images/en-us.svg">
+                <img style="height:45px ;width:152px;" src="images/GetItOnGooglePlay.webp">
+
+              </div>
+            </div>
+            <div class="text-start"><!--icons-->
+              <i class="fa-brands fa-linkedin-in" style=" color:#a5a7aa"></i>
+              <i class="fa-brands fa-youtube" style="color:#a5a7aa"></i>
+              <i class="fa-brands fa-twitter" style="color:#a5a7aa"></i>
+              <i class="fa-brands fa-facebook-f" style="color:#a5a7aa"></i>
+              <i class="fa-brands fa-tiktok" style="color:#a5a7aa"></i>
+              <i class="fa-brands fa-instagram" style="color:#a5a7aa"></i>
+            </div>
+
+
+
+          </div>
+
+
+          <div class="d-flex flex-row justify-content-between col-12 col-md-8 row ">
+            <div class="col-12 col-md-3">
+              <h5 class="fw-bolder mb-3 text-start" style="font-size: 14px;color:#111827">POPULAR TOOLS</h5>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Photo Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Image Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Video Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Music Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Headshot Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Art Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Logo Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Text Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Voice Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Text Humanizer</p>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <h5 class="fw-bolder mb-3 text-start" style="font-size: 14px;color:#111827">MORE TOOLS</h5>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Image Editor</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Chat With AI</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Voice Cloner</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">YouTube Summarizer</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Chat WIth PDF</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Background Changer</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Story Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Blog Post Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Prompt Generator</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Answer Generator</p>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <h5 class="fw-bolder mb-3 text-start" style="font-size: 14px;color:#111827">QUICK LINKS</h5>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Sign Up</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Sign In</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Become an Affiliate</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">AI Tools</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Review</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Free Credits</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Creator Program</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">API Partnerships</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Support</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Status</p>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <h5 class="fw-bolder mb-3 text-start" style="font-size: 14px;color:#111827">COMPANY</h5>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">About</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Contact</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Blog</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Questions?</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Jobs</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Privacy Policy</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Terms of Service</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">Refund Policy</p>
+              </a>
+              <a>
+                <p class="mt-2 mb-0 text-start" style="font-size:14px; color:#4b5563">LLMs.txt</p>
+              </a>
+            </div>
+
+          </div>
+
+
+        </div>
+        <hr>
+        <!--copyright area-->
+        <div class="container-fluid mt-5 pt-2 text-center">
+          <p style="color: #6b7280; font-size:small">
+            <i class="fa-regular fa-copyright "></i><span>2025 Galaxy.AI Inc.All rights reserved.</span>
+          </p>
+
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+</html>
